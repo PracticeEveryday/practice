@@ -1,0 +1,15 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PracticeEveryday/practice.git",
+  "author": "DongHyun Kim <developerforus@gmail.com\ngit config --global user.email developerforus@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
+  }
+}
