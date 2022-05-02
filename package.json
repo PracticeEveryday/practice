@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/PracticeEveryday/practice.git",
-  "author": "DongHyun Kim <developerforus@gmail.com\ngit config --global user.email developerforus@gmail.com>",
+  "author": "DongHyun Kim <developerforus@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start:dev": "tsc-watch --onSuccess \"node dist/practice.js\"",
+    "prestart": "npm run build",
+    "start": "node dist/app.js"
+  },
+  "devDependencies": {
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.6.4"
+  },
   "dependencies": {
-    "express": "^4.17.3",
-    "express-session": "^1.17.2",
-    "nodemon": "^2.0.15",
-    "passport": "^0.5.2",
-    "passport-local": "^1.0.0"
+    "tsc": "^2.0.4"
   }
 }
