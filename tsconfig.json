@@ -15,9 +15,8 @@
     // outDir : 컴파일 후 생성되는 js파일이 생성될 폴더명
     "outDir": "./dist",
     "baseUrl": "./src",
-    "incremental": true,
+    "incremental": true
     // 무조건 타입 지정 any라도
-    "noImplicitAny": true
   },
   //컴파일할 파일 경로를 설정합니다. [ src폴더 하위의 모든 .ts 확장자를 가진 파일 ]
   "include": ["src/**/*"],
