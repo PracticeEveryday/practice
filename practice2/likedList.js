@@ -52,7 +52,7 @@ class LinkedList {
   // 중간 값의 위치 찾기
   find(item) {
     let currentNode = this.head;
-    while (currentNode !== item) {
+    while (currentNode.data !== item) {
       currentNode = currentNode.next;
     }
     return currentNode;
@@ -66,6 +66,7 @@ class LinkedList {
     // 새로운 노드는 지금의 다음 노드를 가리키고
     current.next = newNode;
     // 지금의 다음은 지금의 노드를 가리키게 하자!!
+    this.size++;
   }
 
   findPrevious(item) {
@@ -80,8 +81,9 @@ class LinkedList {
   remove(item) {
     let previousNode = this.findPrevious(item);
     // 삭제할 노드를 가리키는 노드를 찾자!
-    previousNode.next = preNode.next.next;
+    previousNode.next = previousNode.next.next;
     // 그 전 노드가 가리키는 것을 다음 다음 노드를 가리키도록 하면 된다!
+    this.size--;
   }
 }
 
@@ -92,4 +94,8 @@ console.log(linkedList);
 linkedList.append(300);
 console.log(linkedList);
 linkedList.append(400);
+console.log(linkedList);
+linkedList.remove(300);
+console.log(linkedList);
+linkedList.insert(300, 200);
 console.log(linkedList);
