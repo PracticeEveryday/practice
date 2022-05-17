@@ -1,17 +1,20 @@
-var value = 1;
-
-var obj = {
-  value: 100,
+const obj2 = {
   foo: function () {
-    setTimeout(function () {
-      console.log("callback's this: ", this); // ?
-      console.log("callback's this.value: ", this.value); // ?
-      function bar() {
-        console.log("bar's this: ", this); // ?
-      }
-      bar();
-    }, 1000);
+    console.log("foo this", this);
+    function bar() {
+      console.log("bar this", this);
+      console.log(this.a);
+    }
+    bar();
   },
 };
-
-obj.foo();
+global.a = 1;
+function bar() {
+  console.log("bar this", this);
+  console.log(this.a);
+}
+bar();
+obj2.foo();
+console.log(bar.this === obj2.foo.this);
+console.log(obj2.foo.this); // undefined 함수가 호출될 때 this 가 바인딩 된다!!
+console.log(bar);
