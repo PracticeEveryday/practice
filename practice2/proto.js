@@ -192,5 +192,5 @@ console.log(arr.toString()); // 1, 2, 3
 
 function f() {}
 
-console.log(f.__proto__ === Function.prototype);
-console.log(f.__proto__.__proto__ === Object.prototype);
+console.log(f.__proto__ === Function.prototype); // true
+console.log(f.__proto__.__proto__ === Object.prototype); // true
