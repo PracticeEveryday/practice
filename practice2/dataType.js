@@ -102,8 +102,19 @@ console.log(per1.__proto__);
 console.log(Person2.prototype);
 
 console.log(per1.__proto__.constructor); // 원형을 알기 위한 수단이다!!!
+console.log(per1.constructor.constructor); //
 console.log(Person2.prototype.constructor);
 
 console.log(Person2.prototype.constructor("kim"));
 console.log(Person2.prototype.constructor("lee"));
 console.log(per1.__proto__);
+
+console.log(new Function());
+console.log([1, 2].constructor);
+console.log(Array);
+console.log(Object);
+
+const obj = new Object({ a: 1 });
+console.log(obj);
+console.log(obj.constructor);
+console.log(Object.prototype.constructor);
