@@ -62,9 +62,26 @@
 // console.log(globalVariable); // I am global
 // console.log(localVariable);
 // // Uncaught ReferenceError: localVariable is not defined
-let name = "Global Evan";
+// let name = "Global Evan";
 
-if (name === "Global Evan") {
-  console.log(name); // Uncaught ReferenceError: Cannot access 'name' before initialization
-  let name = "Local Evan";
-}
+// if (name === "Global Evan") {
+//   console.log(name); // Uncaught ReferenceError: Cannot access 'name' before initialization
+//   let name = "Local Evan";
+// }
+
+// const maxCount = 30;
+// maxCount = 40; // Uncaught TypeError: Assignment to constant variable.
+
+// const obj = { name: "Evan" };
+// obj = { name: "John" }; // Uncaught TypeError: Assignment to constant variable.
+
+const obj = { name: "Evan" };
+obj.name = "John";
+console.log(obj); // { name: 'John' }
+
+let hi;
+console.log(hi); // undefined
+
+const hi2
+console.log(hi2)
+// SyntaxError: Missing initializer in const declaration
