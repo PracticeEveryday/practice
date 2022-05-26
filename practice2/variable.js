@@ -82,6 +82,6 @@ console.log(obj); // { name: 'John' }
 let hi;
 console.log(hi); // undefined
 
-const hi2
-console.log(hi2)
+// const hi2
+// console.log(hi2)
 // SyntaxError: Missing initializer in const declaration
