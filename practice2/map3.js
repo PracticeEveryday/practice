@@ -21,5 +21,7 @@ const obj = Object.fromEntries(map.entries());
 console.log(obj);
 // { banana: 1, orange: 2, meat: 4 }
 
+// .entries()를 생략해도 가능합니다!!
 let obj2 = Object.fromEntries(map);
 console.log(obj2);
+// { banana: 1, orange: 2, meat: 4 }
