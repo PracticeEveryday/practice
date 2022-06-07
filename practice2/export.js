@@ -24,4 +24,4 @@ function sayBye(user) {
   console.log(`Bye, ${user}!`);
 }
 
-export { sayHello, sayBye };
+export { sayHello as hi, sayBye as bye };
