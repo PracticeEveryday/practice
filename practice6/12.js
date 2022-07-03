@@ -27,3 +27,30 @@ go(
   console.log
 );
 // a => a + 1 => a + 1 + 10 => a + 1 + 10 + 100 => log
+
+// pipe 함수
+// 함수를 리턴하는 함수
+// 함수들이 나열되어 있는 함성된 함수를 만드는 함수
+
+// fs functions!!
+const pipe =
+  (f, ...fs) =>
+  (...as) => {
+    go(f(...as), ...fs);
+  };
+// 3개의 함수를 연속적으로 실행하며 축약해 하나의 함수를 만드는 함수가 pipe!
+const f = pipe(
+  (a, b) => a + b,
+  (a) => a + 10,
+  (a) => a + 100
+);
+console.log(f(0));
+
+go(
+  products,
+  (products) => filter((p) => p.price < 20000, products),
+  (products) => map((p) => p.price, products),
+  (prices) => reduce((a, b) => a + b, prices),
+  console.log
+);
+// 코드 양이 많아졌지만 읽기가 쉬워졌다!
